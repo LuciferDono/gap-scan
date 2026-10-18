@@ -1,0 +1,89 @@
+---
+description: Separates startup gaps that are real companies from gaps that are features waiting to be cloned. Applies the Barred test (incumbent structural conflict) + the Reach test (first 10-20 nameable users). Fires on "is this a company or feature?", "untapped market", "should I build this?", /gap-scan.
+alwaysApply: true
+---
+
+# gap-scan — separate companies from features
+
+When the user types any of these phrases or any phrase in the same shape:
+
+- "find an unfilled gap" / "untapped market for X"
+- "is this a company or a feature?"
+- "why isn't this just a Cursor/OpenAI/Google feature?"
+- "is this defensible?"
+- "is this already crowded?" / "who else is doing this?"
+- "should I build this?"
+- "find a startup idea in [space]"
+- `/gap-scan`
+
+OR when the user is weighing whether to build a specific idea into a company (not when they're doing market research with no build decision, and not when they're analyzing a product they've already shipped):
+
+Run the two-test protocol below. The verdict is one of COMPANY / FEATURE / HYPOTHESIS. Do not soften with "it depends."
+
+## The two tests
+
+### Test 1 — Barred
+
+Is the best-positioned incumbent structurally conflicted from building this?
+
+1. Name the single best-positioned incumbent. Not three. The one.
+2. Name what that incumbent would have to sacrifice to ship this (not "nothing") — a flagship product's attention, a channel conflict, a pricing commitment, a strategic bet.
+3. If the sacrifice is cheap or imaginary, the gap is a feature. The incumbent ships it, timeline named.
+4. If the sacrifice is real and structural, the Barred test passes.
+
+Example of pass: a startup selling local-first privacy-focused notes isn't bar for Notion because Notion's entire business model is server-hosted collaboration. Shipping local-first undermines their core.
+
+Example of fail: a startup selling AI inbox summarization isn't barred for Google because Google ships it as a Gemini feature in Gmail with zero sacrifice.
+
+### Test 2 — Reach
+
+Are the first 10-20 users nameable humans reachable today?
+
+1. List 10-20 concrete first users: name, role, company (or named role + sub-segment + channel if named-user is impractical).
+2. Name the single channel that reaches each.
+3. If the list collapses to "developers on Twitter" or "any SMB owner" or "founders," Reach fails.
+4. If each user is traceable to a real person reachable today, Reach passes.
+
+Example of pass: a startup selling an invoice tool for Indian freelance translators can list 15 specific translators by name/handle in the first week, reach them via r/India + specific Discord servers + two WhatsApp groups.
+
+Example of fail: a startup selling "AI for small businesses" cannot name 15 specific small-business owners who want it and can be reached today.
+
+## Verdict shape
+
+```
+VERDICT: [COMPANY | FEATURE | HYPOTHESIS]
+
+Barred test: [PASS | FAIL]
+- Best-positioned incumbent: [named entity]
+- What they'd sacrifice to ship this: [specific sacrifice, or "nothing"]
+- Timeline to absorption (if FAIL): [specific or "already absorbed"]
+
+Reach test: [PASS | FAIL]
+- First 10-20 users (abbreviated): [list of names/roles with channel to each]
+- OR failure mode: [why the list collapses to an archetype]
+
+Pivot direction (if FEATURE or HYPOTHESIS):
+[Specific research pointers or sub-segments where the test might pass]
+```
+
+## Evidence rules
+
+- Every claim about an incumbent must name the incumbent, with a specific product or announcement where possible.
+- Every claim that "no one is doing this" must name the nearest existing competitor. "No one" is almost always wrong; the question is who's closest.
+- First-users list must have real names/roles when possible, not placeholder archetypes.
+- Do NOT bless an idea by lowering the test bar. If both tests fail, say so.
+
+## When NOT to fire
+
+- Market research with no build decision attached ("what's happening in biotech right now?")
+- Competitive analysis of an already-shipped product the user owns
+- Pricing-only questions (different task)
+- The user explicitly asks for cheerleading, not analysis
+
+## Hard constraint — don't bless weak ideas
+
+The skill exists to kill FEATURE and HYPOTHESIS ideas before the user wastes time. Do NOT soften a FAIL verdict to COMPANY to spare feelings. If you're uncertain between COMPANY and FEATURE, favor FEATURE and name the specific evidence that would flip the verdict. The user can act on an honest FEATURE verdict (pivot or walk); they can't act on a dishonest COMPANY verdict except by losing time.
+
+## Full reference
+
+For the full protocol, structural-conflict theory, research-leg templates, and the one-page scan artifact, see https://github.com/LuciferDono/gap-scan/blob/main/SKILL.md and the references/ directory.

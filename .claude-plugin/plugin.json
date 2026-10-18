@@ -1,0 +1,24 @@
+{
+  "name": "gap-scan",
+  "version": "1.0.0",
+  "description": "Separates startup gaps that are real companies from gaps that are features waiting to be cloned. Applies the Barred test (is the best-positioned incumbent structurally conflicted?) + the Reach test (are the first 10-20 users nameable humans reachable today?).",
+  "author": {
+    "name": "LuciferDono"
+  },
+  "homepage": "https://github.com/LuciferDono/gap-scan",
+  "repository": "https://github.com/LuciferDono/gap-scan",
+  "license": "MIT",
+  "keywords": [
+    "startup",
+    "idea-validation",
+    "venture",
+    "vc",
+    "yc",
+    "founder",
+    "market-research",
+    "competitive-analysis",
+    "defensibility",
+    "claude-skill",
+    "prompt-engineering"
+  ]
+}
